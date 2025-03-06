@@ -5,4 +5,9 @@ document.getElementById('play').addEventListener('click', function(){
     // playGroundSection.classList.remove('hidden')
     homeSection('home')
     palyGroundSection('play-ground')
+    continueGame();
 })
+
+function continueGame(){
+    let alphabet = getRandomAlphabet();
+}
