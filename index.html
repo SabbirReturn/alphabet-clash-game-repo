@@ -10,14 +10,14 @@
 </head>
 <body>
     <main class="bg-[#1E1E1E] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <section class="home flex min-h-screen justify-center items-center hidden ">
+        <section id="home" class="flex min-h-screen justify-center items-center">
             <div class="flex flex-col items-center gap-5">
                 <h1 class="anton-regular text-9xl text-white">ALPHABET CLASH</h1>
                 <p class="text-white text-xl poppins-regular">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn btn-soft btn-primary poppins-regular">Play Now</button>
+                <button id="play" class="btn btn-soft btn-primary poppins-regular">Play Now</button>
             </div>
         </section>
-        <section class="play-ground hidden">
+        <section id="play-ground" class="hidden">
             <div class="flex flex-col justify-center items-center pt-16 gap-10">
                 <!--Screen Start  -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-xl border-indigo-400 bg-[#FFFFFFB3]">
@@ -83,7 +83,7 @@
                  </div>
             </div>
         </section>
-        <section class="score flex justify-center items-center min-h-screen">
+        <section id="score" class="flex justify-center items-center min-h-screen hidden">
             <div class="text-center space-y-5 bg-[#FFFFFF33] p-8 rounded-2xl">
                 <h1 class="">
                     <span class="text-3xl font-extrabold">Score:</span>
@@ -94,5 +94,7 @@
             </div>
         </section>
     </main>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 </html>
