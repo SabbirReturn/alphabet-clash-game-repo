@@ -10,5 +10,7 @@ document.getElementById('play').addEventListener('click', function(){
 
 function continueGame(){
     let alphabet = getRandomAlphabet();
-    console.log(alphabet);
+    let screen = document.getElementById('board');
+    screen.innerText= alphabet;
+    setBackGroundColor(alphabet);
 }
