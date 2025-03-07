@@ -10,4 +10,5 @@ document.getElementById('play').addEventListener('click', function(){
 
 function continueGame(){
     let alphabet = getRandomAlphabet();
+    console.log(alphabet);
 }
