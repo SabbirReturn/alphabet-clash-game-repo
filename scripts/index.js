@@ -1,3 +1,10 @@
+function continueGame(){
+    let alphabet = getRandomAlphabet();
+    let screen = document.getElementById('board');
+    screen.innerText= alphabet;
+    setBackGroundColor(alphabet);
+}; 
+
 document.getElementById('play').addEventListener('click', function(){
     // let homeSection = document.getElementById('home');
     // homeSection.classList.add('hidden')
@@ -6,11 +13,9 @@ document.getElementById('play').addEventListener('click', function(){
     homeSection('home')
     palyGroundSection('play-ground')
     continueGame();
-})
+});
 
-function continueGame(){
-    let alphabet = getRandomAlphabet();
-    let screen = document.getElementById('board');
-    screen.innerText= alphabet;
-    setBackGroundColor(alphabet);
+function handleKeyButtonPress(){
+    console.log('key press')
 }
+document.addEventListener('keyup',handleKeyButtonPress);
