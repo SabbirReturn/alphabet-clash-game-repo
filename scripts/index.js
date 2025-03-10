@@ -15,6 +15,10 @@ document.getElementById('play').addEventListener('click', function(){
     continueGame();
 });
 
+// function handleKeyButtonPress(){
+//     console.log('key press')
+// }
+// document.addEventListener('keyup',handleKeyButtonPress);
 function handleKeyButtonPress(){
     console.log('key press')
 }
