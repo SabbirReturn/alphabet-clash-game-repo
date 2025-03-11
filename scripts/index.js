@@ -1,6 +1,5 @@
 function continueGame(){
     let alphabet = getRandomAlphabet();
-    console.log('random alphabet',alphabet);
     let screen = document.getElementById('board');
     screen.innerText= alphabet;
     setBackGroundColor(alphabet);
@@ -17,19 +16,25 @@ document.getElementById('play').addEventListener('click', function(){
 });
 function keyUpButtonPress(event){
     let playerPress = event.key;
-    console.log( 'playerPress',playerPress);
     let screen = document.getElementById('board');
     let currentAlphabet = screen.innerText
     let expectedAlphabet = currentAlphabet.toLocaleLowerCase();
-    console.log(playerPress,expectedAlphabet);
 
     if(playerPress === expectedAlphabet){
-        console.log('win')
+        let currentScoreElement = document.getElementById('current-score');
+        let currentScore = currentScoreElement.innerText; 
+        let score = parseInt(currentScore);
+        let newScore = score + 1;
+        currentScoreElement.innerText = newScore;
         continueGame();
         removeBackGroundColor(expectedAlphabet);
     }
     else{
-        console.log('fail');
+        let currentLifeElement = document.getElementById('current-life');
+        let currentLife = currentLifeElement.innerText;
+        let life = parseInt(currentLife);
+        let newLife = life-1;
+        currentLifeElement.innerText = newLife;
     }
 }
 document.addEventListener('keyup',keyUpButtonPress);
