@@ -25,6 +25,8 @@ function keyUpButtonPress(event){
 
     if(playerPress === expectedAlphabet){
         console.log('win')
+        continueGame();
+        removeBackGroundColor(expectedAlphabet);
     }
     else{
         console.log('fail');

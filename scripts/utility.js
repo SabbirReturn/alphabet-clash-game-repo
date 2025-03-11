@@ -27,3 +27,7 @@ function setBackGroundColor(elementId){
     let element = document.getElementById(elementId);
     element.classList.add('bg-orange-400')
 }
+function removeBackGroundColor(elementID){
+    let element = document.getElementById(elementID);
+    element.classList.remove('bg-orange-400');
+}
