@@ -21,20 +21,22 @@ function keyUpButtonPress(event){
     let expectedAlphabet = currentAlphabet.toLocaleLowerCase();
 
     if(playerPress === expectedAlphabet){
-        let currentScoreElement = document.getElementById('current-score');
-        let currentScore = currentScoreElement.innerText; 
-        let score = parseInt(currentScore);
-        let newScore = score + 1;
-        currentScoreElement.innerText = newScore;
+        // let currentScoreElement = document.getElementById('current-score');
+        // let currentScore = currentScoreElement.innerText; 
+        // let score = parseInt(currentScore);
+        // let newScore = score + 1;
+        // currentScoreElement.innerText = newScore;
+        currentScoreElementById('current-score')
         continueGame();
         removeBackGroundColor(expectedAlphabet);
     }
     else{
-        let currentLifeElement = document.getElementById('current-life');
-        let currentLife = currentLifeElement.innerText;
-        let life = parseInt(currentLife);
-        let newLife = life-1;
-        currentLifeElement.innerText = newLife;
+        // let currentLifeElement = document.getElementById('current-life');
+        // let currentLife = currentLifeElement.innerText;
+        // let life = parseInt(currentLife);
+        // let newLife = life-1;
+        // currentLifeElement.innerText = newLife;
+        currentLifeElementById('current-life')
     }
 }
 document.addEventListener('keyup',keyUpButtonPress);
