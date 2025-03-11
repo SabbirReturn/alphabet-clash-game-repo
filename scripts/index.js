@@ -1,5 +1,6 @@
 function continueGame(){
     let alphabet = getRandomAlphabet();
+    console.log('random alphabet',alphabet);
     let screen = document.getElementById('board');
     screen.innerText= alphabet;
     setBackGroundColor(alphabet);
@@ -14,12 +15,19 @@ document.getElementById('play').addEventListener('click', function(){
     palyGroundSection('play-ground')
     continueGame();
 });
+function keyUpButtonPress(event){
+    let playerPress = event.key;
+    console.log( 'playerPress',playerPress);
+    let screen = document.getElementById('board');
+    let currentAlphabet = screen.innerText
+    let expectedAlphabet = currentAlphabet.toLocaleLowerCase();
+    console.log(playerPress,expectedAlphabet);
 
-// function handleKeyButtonPress(){
-//     console.log('key press')
-// }
-// document.addEventListener('keyup',handleKeyButtonPress);
-function handleKeyButtonPress(){
-    console.log('key press')
+    if(playerPress === expectedAlphabet){
+        console.log('win')
+    }
+    else{
+        console.log('fail');
+    }
 }
-document.addEventListener('keyup',handleKeyButtonPress);
+document.addEventListener('keyup',keyUpButtonPress);
