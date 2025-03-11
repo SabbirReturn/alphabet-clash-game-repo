@@ -26,7 +26,13 @@ function keyUpButtonPress(event){
         // let score = parseInt(currentScore);
         // let newScore = score + 1;
         // currentScoreElement.innerText = newScore;
-        currentScoreElementById('current-score')
+        // currentScoreElementById('current-score')
+        // continueGame();
+        // removeBackGroundColor(expectedAlphabet);
+
+        let currentScore = getElementValueById('current-score');
+        let updatedScore = currentScore + 1;
+        setTextElementById('current-score', updatedScore);
         continueGame();
         removeBackGroundColor(expectedAlphabet);
     }
@@ -36,7 +42,24 @@ function keyUpButtonPress(event){
         // let life = parseInt(currentLife);
         // let newLife = life-1;
         // currentLifeElement.innerText = newLife;
-        currentLifeElementById('current-life')
+
+        let currentLife = getElementValueById('current-life')
+        let updatedLife = currentLife - 1;
+        setTextElementById('current-life',updatedLife);
+        if(updatedLife === 0){
+            gameOver();
+        }
+
+        // let updateLife = currentLifeElementById('current-life');
+        // let life = parseInt(updateLife);
+        // if( life === 0){
+        //     console.log('game over');
+        // }
     }
 }
 document.addEventListener('keyup',keyUpButtonPress);
+
+function gameOver(){
+    homeSection('play-ground');
+    palyGroundSection('score');
+}

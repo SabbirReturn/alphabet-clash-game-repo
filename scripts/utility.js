@@ -32,17 +32,29 @@ function removeBackGroundColor(elementID){
     element.classList.remove('bg-orange-400');
 }
 
-function currentScoreElementById(elementById){
-    let currentScoreElement = document.getElementById(elementById);
-    let currentScore = currentScoreElement.innerText;
-    let score = parseInt(currentScore);
-    let newScore = score + 1;
-    currentScoreElement.innerText = newScore;
+// function currentScoreElementById(elementById){
+//     let currentScoreElement = document.getElementById(elementById);
+//     let currentScore = currentScoreElement.innerText;
+//     let score = parseInt(currentScore);
+//     let newScore = score + 1;
+//     currentScoreElement.innerText = newScore;
+// }
+// function currentLifeElementById(elementById){
+//     let currentLifeElement = document.getElementById(elementById);
+//     let currentLife = currentLifeElement.innerText;
+//     let life = parseInt(currentLife);
+//     let newLife = life -1;
+//     currentLifeElement.innerText = newLife;
+// }
+
+function getElementValueById(elementID){
+    let element = document.getElementById(elementID);
+    let elementValueText = element.innerText;
+    let value = parseInt(elementValueText);
+    return value;
 }
-function currentLifeElementById(elementById){
-    let currentLifeElement = document.getElementById(elementById);
-    let currentLife = currentLifeElement.innerText;
-    let life = parseInt(currentLife);
-    let newLife = life -1;
-    currentLifeElement.innerText = newLife;
+
+function setTextElementById(elementID,value){
+    let element = document.getElementById(elementID);
+    element.innerText = value;
 }
