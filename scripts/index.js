@@ -5,15 +5,24 @@ function continueGame(){
     setBackGroundColor(alphabet);
 }; 
 
-document.getElementById('play').addEventListener('click', function(){
-    // let homeSection = document.getElementById('home');
-    // homeSection.classList.add('hidden')
-    // let playGroundSection = document.getElementById('play-ground');
-    // playGroundSection.classList.remove('hidden')
-    homeSection('home')
-    palyGroundSection('play-ground')
+// document.getElementById('play').addEventListener('click', function(){
+//     // let homeSection = document.getElementById('home');
+//     // homeSection.classList.add('hidden')
+//     // let playGroundSection = document.getElementById('play-ground');
+//     // playGroundSection.classList.remove('hidden')
+//     hideElementById('home')
+//     showElementById('play-ground')
+    
+//     continueGame();
+// });
+function play(){
+    hideElementById('home');
+    showElementById('play-ground');
+    hideElementById('score')
+    setTextElementById('current-life',5);
+    setTextElementById('current-score',0);
     continueGame();
-});
+}
 function keyUpButtonPress(event){
     let playerPress = event.key;
     let screen = document.getElementById('board');
@@ -60,6 +69,11 @@ function keyUpButtonPress(event){
 document.addEventListener('keyup',keyUpButtonPress);
 
 function gameOver(){
-    homeSection('play-ground');
-    palyGroundSection('score');
+    hideElementById('play-ground');
+    showElementById('score');
 }
+
+// function playAgain(){
+//     hideElementById('score');
+//     showElementById('play-ground');
+// }

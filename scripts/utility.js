@@ -1,8 +1,8 @@
-function homeSection(elementId){
+function hideElementById(elementId){
     let element = document.getElementById(elementId);
     element.classList.add('hidden');
 }
-function palyGroundSection(elementId){
+function showElementById(elementId){
     let playGround = document.getElementById(elementId);
     playGround.classList.remove('hidden');
 }
