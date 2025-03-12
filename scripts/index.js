@@ -25,6 +25,9 @@ function play(){
 }
 function keyUpButtonPress(event){
     let playerPress = event.key;
+    if(playerPress === 'Escape'){
+        gameOver()
+    }
     let screen = document.getElementById('board');
     let currentAlphabet = screen.innerText
     let expectedAlphabet = currentAlphabet.toLocaleLowerCase();
@@ -71,6 +74,11 @@ document.addEventListener('keyup',keyUpButtonPress);
 function gameOver(){
     hideElementById('play-ground');
     showElementById('score');
+    let updatedScore = getElementValueById('current-score');
+    setTextElementById('last-score',updatedScore);
+
+    let currentAlphabet = getElementTextById('board');
+    removeBackGroundColor(currentAlphabet);
 }
 
 // function playAgain(){

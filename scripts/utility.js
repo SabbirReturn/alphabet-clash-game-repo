@@ -58,3 +58,9 @@ function setTextElementById(elementID,value){
     let element = document.getElementById(elementID);
     element.innerText = value;
 }
+
+function getElementTextById(elementID){
+    let element = document.getElementById(elementID);
+    let text = element.innerText;
+    return text;
+}
